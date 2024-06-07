@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Q-1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function subtot()
+        {
+            var p=document.getElementById("price").value;
+            var q=document.getElementById("qty").value;
+            var t=p*q;
+            document.getElementById("tot").innerHTML=+t;
+        }
+        function subtot1()
+        {
+            var a=document.getElementById("p").value;
+            var b=document.getElementById("q").value;
+            var c=a*b;
+            document.getElementById("t").innerHTML=+c;
+        }
+        function sum()
+        {
+            var x=document.getElementById("t").value;
+            var y=document.getElementById("c").value;
+            var z=x+y;
+            document.getElementById("n").innerHTML=+z;
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    <table align="center" border="2">
+
+        <tr>
+            <th>Product info.</th>
+            <th>Quantity</th>
+            <th>Price(per unit)</th>
+            <th>Price(subtotal)</th>
+            <th></th>
+        </tr>
+        
+        <tr>
+            <td><img src= "https://www.heraldgoa.in/uploads/news/big_205179_manogo.jpg" width="100" height="100"><br>Mango </td>
+            <td><input type="number" name="quantity" min="1" max="5" value="1" id="qty" onchange="subtot()"></td>
+            <td align="center" ><input type="text" value=" 150" id="price" style="border: none; width:45px" readonly ></td>
+            <td align="center"><label id="tot">150</label></td>
+            <td><button>Remove</button></td>
+        </tr>
+
+        <tr>
+            <td><img src= "https://static.wixstatic.com/media/687f33_f3aeab2f7f5d4e0a8e0af70af1e7189b~mv2.jpg/v1/fill/w_480,h_360,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/687f33_f3aeab2f7f5d4e0a8e0af70af1e7189b~mv2.jpg" width="100" height="100"><br>Graps </td>
+            <td><input type="number" name="quantity" min="1" max="5" value="1" id="q" onchange="subtot1()"></td>
+            <td align="center" ><input type="text" value=" 200" id="p" style="border: none; width:45px" readonly ></td>
+            <td align="center"><label id="t">200</label></td>
+            <td><button>Remove</button></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input onchange="sum()" ></td>
+            <td><input type="text"  id="p" style="border: none; width:45px" readonly >  </td>
+            <td align="center"><label id="n" >350</label></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
